@@ -1,7 +1,7 @@
 {
   "displayName": "sustAGE User Postures & Actions Monitoring dataset",
   "name": "sustage-dataset",
-  "description": "A sample of 33 items of cropped annotated videos from the sustAGE User Postures & Actions Monitoring dataset. The sustAGE User Postures & Actions Monitoring dataset contains videos, data related to occurrences of ergonomic (body straining) postures as well as heart rate measurements of line workers during work activities in a realistic manufacturing environment. \nThe time-synchronized data streams were captured during assembly tasks performed by real line workers in a realistic car door assembly production line in the premises of Stellantis --- Centro Ricerche FIAT (CRF)/SPW Research & Innovation department in Melfi, Italy in the context of the sustAGE project.",
+  "description": "The sustAGE User Postures & Actions Monitoring dataset contains videos, data related to occurrences of ergonomic (body straining) postures as well as heart rate measurements of line workers during work activities in a realistic manufacturing environment. \nThe time-synchronized data streams were captured during assembly tasks performed by real line workers in a realistic car door assembly production line in the premises of Stellantis --- Centro Ricerche FIAT (CRF)/SPW Research & Innovation department in Melfi, Italy in the context of the sustAGE project.",
   "scope": "public",
   "codebase": {
     "type": "git",
