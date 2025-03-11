@@ -99,7 +99,7 @@ class sustAGE(dl.BaseServiceRunner):
         # Setup dataset recipe and ontology
         recipe = dataset.recipes.list()[0]
         ontology = recipe.ontologies.list()[0]
-        with open(os.path.join(direc, 'sustAGE Actions+Postures videos-ontology'), 'r') as f:
+        with open(os.path.join(direc, 'sustAGE Actions+Postures videos-ontology.json'), 'r') as f:
             ontology_json = json.load(f)
         ontology.copy_from(ontology_json=ontology_json)
 
