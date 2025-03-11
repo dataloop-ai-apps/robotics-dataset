@@ -5,7 +5,7 @@
   "scope": "public",
   "codebase": {
     "type": "git",
-    "gitUrl": "https://github.com/dataloop-ai-apps/robotics-datasets.git",
+    "gitUrl": "https://github.com/dataloop-ai-apps/robotics-dataset.git",
     "gitTag": "0.0.0"
   },
   "version": "0.0.0",
