@@ -2,7 +2,6 @@ import json
 import logging
 import os
 import zipfile
-from concurrent.futures import ThreadPoolExecutor, as_completed
 from functools import partial
 
 import dtlpy as dl
@@ -43,7 +42,7 @@ class sustAGE(dl.BaseServiceRunner):
 
         self.logger.info('Downloading zip file...')
         direc = os.getcwd()
-        zip_dir = os.path.join(direc, "sustAGE.zip")
+        zip_dir = os.path.join(direc, "sustAGE Actions+Postures videos.zip")
 
         if not os.path.exists(zip_dir):
             response = requests.get(source, timeout=100)
