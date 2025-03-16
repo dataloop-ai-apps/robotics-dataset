@@ -1,7 +1,7 @@
 # Dataset adapter for sustAGE User Postures & Actions Monitoring dataset
 
 This dataset adapter streamlines the conversion of the [sustAGE User Postures & Actions Monitoring dataset](https://data.niaid.nih.gov/resources?id=zenodo_7043786) 
-into a format compatible with the Dataloop platform. 
+into a format compatible with the Dataloop platform. \
 It creates a dataset on Dataloop with a sample of 33 videos, each annotated with a classification annotation, that contains the attributes of the activity on the video.
 
 ![dataset_browse.png](assets/dataset_browse.png)
