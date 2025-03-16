@@ -1,0 +1,78 @@
+{
+  "displayName": "sustAGE User Postures & Actions Monitoring dataset",
+  "name": "sustage-dataset",
+  "description": "The sustAGE User Postures & Actions Monitoring dataset contains videos, data related to occurrences of ergonomic (body straining) postures as well as heart rate measurements of line workers during work activities in a realistic manufacturing environment. \nThe time-synchronized data streams were captured during assembly tasks performed by real line workers in a realistic car door assembly production line in the premises of Stellantis --- Centro Ricerche FIAT (CRF)/SPW Research & Innovation department in Melfi, Italy in the context of the sustAGE project.",
+  "scope": "public",
+  "codebase": {
+    "type": "git",
+    "gitUrl": "https://github.com/dataloop-ai-apps/robotics-dataset.git",
+    "gitTag": "0.0.0"
+  },
+  "version": "0.0.0",
+  "attributes": {
+    "Category": "Dataset",
+    "Provider": "Dataloop",
+    "Media Type": "Video",
+    "Annotation Type": "Classification",
+    "License": "CC BY 4.0"
+  },
+  "components": {
+    "computeConfigs": [
+      {
+        "name": "dataset-deploy",
+        "secrets": [],
+        "runtime": {
+          "podType": "regular-xs",
+          "concurrency": 1,
+          "autoscaler": {
+            "type": "rabbitmq",
+            "minReplicas": 0,
+            "maxReplicas": 2,
+            "queueLength": 1000
+          }
+        }
+      }
+    ],
+    "modules": [
+      {
+        "name": "dataset_adapter",
+        "entryPoint": "dataset_loader.py",
+        "className": "sustAGE",
+        "description": "Dataset adapter",
+        "initInputs": [],
+        "functions": [
+          {
+            "name": "upload_dataset",
+            "input": [
+              {
+                "type": "Dataset",
+                "name": "dataset",
+                "description": "Dataloop Dataset Entity"
+              },
+              {
+                "type": "String",
+                "name": "source",
+                "description": "Dataset source URL"
+              }
+            ],
+            "output": [],
+            "displayName": "upload_dataset",
+            "displayIcon": "",
+            "description": "function to upload dataset to Dataloop"
+          }
+        ]
+      }
+    ],
+    "datasets": [
+      {
+        "name": "sustAGE",
+        "docs": "https://data.niaid.nih.gov/resources?id=zenodo_7043786",
+        "source": "https://storage.googleapis.com/model-mgmt-snapshots/datasets-robotics/sustAGE%20Actions%2BPostures%20videos.zip",
+        "invoke": {
+          "namespace": "dataset_adapter.upload_dataset"
+        },
+        "computeConfig": "dataset-deploy"
+      }
+    ]
+  }
+}
