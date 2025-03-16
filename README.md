@@ -4,9 +4,7 @@ This dataset adapter streamlines the conversion of the [sustAGE User Postures & 
 into a format compatible with the Dataloop platform. 
 It creates a dataset on Dataloop with a sample of 33 videos, each annotated with a classification annotation, that contains the attributes of the activity on the video.
 
-Add image of:
-1. Installation marketplace
-2. Image of dataset browse
+![dataset_browse.png](assets/dataset_browse.png)
 
 ## Installation
 
@@ -14,5 +12,7 @@ Add image of:
 2. Select **Datasets**.
 3. Choose the `sustAGE User Postures & Actions Monitoring dataset` from the list of available datasets.
 4. Click on **Install**.
+
+![marketplace.png](assets/marketplace.png)
 
 After a while, a new dataset will be created and visible under your **Data** section.
